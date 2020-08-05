@@ -400,9 +400,9 @@ def identify_adapters(artificial_artifacts, forward = "", reverse = "", unpaired
 		u_check = True
 		count += 1
 	
-	fastqc_command_f = ["fastqc", "--quiet", "-o", output, forward]
-	fastqc_command_r = ["fastqc", "--quiet", "-o", output, reverse]
-	fastqc_command_u = ["fastqc", "--quiet", "-o", output, unpaired]
+	fastqc_command_f = ["falco", "--quiet", "-o", output, forward]
+	fastqc_command_r = ["falco", "--quiet", "-o", output, reverse]
+	fastqc_command_u = ["falco", "--quiet", "-o", output, unpaired]
 	
 	seqtk_command_f = ["seqtk", "sample", "-s", "100", forward, "100000"]
 	seqtk_command_r = ["seqtk", "sample", "-s", "100", reverse, "100000"]
